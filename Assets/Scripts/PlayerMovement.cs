@@ -18,6 +18,11 @@ public class PlayerMovement : MonoBehaviour
         transform.eulerAngles = new Vector3(0, 90, 0);
     }
 
+    private void Start()
+    {
+        anim.Play("Idle");
+    }
+
     private void Update()
     {
 
@@ -32,8 +37,10 @@ public class PlayerMovement : MonoBehaviour
         else
             canJump = false;
 
+        anim.SetBool("CanJump", !canJump);
+
         rb.velocity = new Vector3(Input.GetAxis("Horizontal") * MoveSpeed, rb.velocity.y, rb.velocity.z);
-        Debug.Log(Input.GetAxis("Horizontal"));
+
         if (Input.GetAxis("Horizontal") != 0)
             anim.SetBool("CanMove", true);
         else
