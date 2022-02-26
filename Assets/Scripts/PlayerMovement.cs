@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
             canJump = false;
 
         rb.velocity = new Vector3(Input.GetAxis("Horizontal") * MoveSpeed, rb.velocity.y, rb.velocity.z);
-
+        Debug.Log(Input.GetAxis("Horizontal"));
         if (Input.GetAxis("Horizontal") != 0)
             anim.SetBool("CanMove", true);
         else
