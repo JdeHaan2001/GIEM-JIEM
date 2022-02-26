@@ -30,7 +30,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 3.97, z: -2.5}
   m_LocalScale: {x: 1.8, y: 1.8, z: 1.8}
   m_Children:
-  - {fileID: 5970983663842566173}
+  - {fileID: 972449521468188730}
   - {fileID: 5709082104000747958}
   - {fileID: 5709082103681266115}
   m_Father: {fileID: 0}
@@ -192,7 +192,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1001 &6149537184316803062
+--- !u!1001 &789375464562053073
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -209,7 +209,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 345c12286bfbb9a498891a1d990b51d3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 345c12286bfbb9a498891a1d990b51d3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -249,24 +249,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 345c12286bfbb9a498891a1d990b51d3, type: 3}
---- !u!1 &6455596349215701671 stripped
+--- !u!1 &447269358422225536 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 345c12286bfbb9a498891a1d990b51d3, type: 3}
-  m_PrefabInstance: {fileID: 6149537184316803062}
+  m_PrefabInstance: {fileID: 789375464562053073}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &5970983663842566173 stripped
+--- !u!4 &972449521468188730 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 345c12286bfbb9a498891a1d990b51d3, type: 3}
-  m_PrefabInstance: {fileID: 6149537184316803062}
+  m_PrefabInstance: {fileID: 789375464562053073}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &6129417076766998346
+--- !u!95 &4462205230673461169
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6455596349215701671}
+  m_GameObject: {fileID: 447269358422225536}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 0067768ea3625f14fa6c7bc706880888, type: 2}
