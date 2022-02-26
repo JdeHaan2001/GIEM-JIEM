@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class Health : MonoBehaviour
 {
-    public TextMeshProUGUI hpTMP;
+    public HealthBar healthBar;
 
     public int MaxHealth = 100;
     private int currentHealth;
@@ -15,14 +16,24 @@ public class Health : MonoBehaviour
         currentHealth = MaxHealth;
     }
 
-    public void Heal(int hp)
+    public bool Heal(int hp)
     {
-        if (currentHealth + hp > MaxHealth)
+        if (currentHealth == MaxHealth) 
+            return false;
+        else if (currentHealth + hp > MaxHealth)
+        {
             currentHealth = MaxHealth;
-        else
+            updateHealthUI();
+            return true;
+        }
+        else if (currentHealth < MaxHealth)
+        {
             currentHealth += hp;
-
-        updateHealthUI();
+            updateHealthUI();
+            return true;
+        }
+        else
+            return false;
     }
 
     public void DealDamage(int dmg)
@@ -40,7 +51,7 @@ public class Health : MonoBehaviour
 
     private void updateHealthUI()
     {
-        hpTMP.text = currentHealth.ToString();
+        healthBar.TakeDamage(currentHealth);
     }
 
     private void handleDeath()
