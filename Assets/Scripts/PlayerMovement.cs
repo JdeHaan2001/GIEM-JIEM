@@ -33,11 +33,17 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         if (Physics.Raycast(transform.position, Vector3.down, 2f))
+        {
+            anim.SetBool("CanJump", false);
             canJump = true;
+        }
         else
+        {
+            anim.SetBool("CanJump", true);
             canJump = false;
+        }
 
-        anim.SetBool("CanJump", !canJump);
+        //anim.SetBool("CanJump", !canJump);
 
         rb.velocity = new Vector3(Input.GetAxis("Horizontal") * MoveSpeed, rb.velocity.y, rb.velocity.z);
 
