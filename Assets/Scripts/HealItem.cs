@@ -14,5 +14,7 @@ public class HealItem : MonoBehaviour
             if (canHeal)
                 Destroy(this.gameObject);
         }
+        
     }
+    
 }
