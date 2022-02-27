@@ -40,7 +40,7 @@ public class Health : MonoBehaviour
 
     private void updateHealthUI()
     {
-        hpTMP.text = currentHealth.ToString();
+        //hpTMP.text = currentHealth.ToString();
     }
 
     private void handleDeath()

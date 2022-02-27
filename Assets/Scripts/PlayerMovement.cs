@@ -20,14 +20,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-
+        anim.SetBool("CanJump", !canJump);
         if (Input.GetKeyDown(KeyCode.Space) && canJump)
             rb.velocity = new Vector3(rb.velocity.x, JumpForce, rb.velocity.z);
     }
 
     private void FixedUpdate()
     {
-        if (Physics.Raycast(transform.position, Vector3.down, 2f))
+        if (Physics.Raycast(transform.position, Vector3.down, 2.5f))
             canJump = true;
         else
             canJump = false;
